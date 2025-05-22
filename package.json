@@ -1,9 +1,16 @@
 {
   "name": "wedding",
   "version": "1.0.0",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "deploy": "npm run build && vercel deploy --prod"
   },
   "dependencies": {
     "react": "^19.1.0",
